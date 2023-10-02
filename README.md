@@ -1,2 +1,4 @@
 # TODO
-Yksinkertainen To Do-lista, jolla voit helpottaa ajanhallintaa ja pysyä tavoitteissasi
+Kanban-tyylinen to do-lista, jonka avulla pysyt ajan tasalla kaikista tehtävistäsi.
+
+Tekijät: Juho Jaaranen ja Julius Mäki
