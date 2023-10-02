@@ -7,24 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="header col-12">
     <h1>To Do-lista</h1>
     <p>Helppokäyttöinen to do-lista, jonka avulla pysyt tavoitteissasi ja tehtävissäsi ajan tasalla.</p>
+</div>
 
+<form>
+    <label for="otsikko">Otsikko:</label>
+    <input type="text" id="otsikko" name="otsikko">
+    
+    <label for="teht">Tehtävä:</label>
+    <input type="text" id="teht" name="teht">
 
+    <button type="submit">Lisää</button>
+</form>
 
-<div><!-- to-do lista -->
-    <div><!-- TO DO -->
-        <div><!-- todo listan lappu esimerkki -->
+<div class="row col-12"><!-- to-do lista -->
 
+    <div class="col-4"><!-- TO DO -->
+        <h1>TO DO</h1>
+        <div class="col-6"><!-- todo listan lappu esimerkki -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum tempor turpis in tristique</p>
+        </div>
+        <div class="col-6"><!-- todo listan lappu esimerkki -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum tempor turpis in tristique</p>
         </div>
     </div>
 
-    <div><!-- IN PROGRESS -->
-
+    <div class="col-4"><!-- IN PROGRESS -->
+        <h1>IN PROGRESS</h1>
+        <div class="col-6"><!-- todo listan lappu esimerkki -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum tempor turpis in tristique</p>
+        </div>
+        <div class="col-6"><!-- todo listan lappu esimerkki -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum tempor turpis in tristique</p>
+        </div>
     </div>
 
-    <div><!-- DONE -->
-
+    <div class="col-4"><!-- DONE -->
+        <h1>DONE</h1>
+        <div class="col-6"><!-- todo listan lappu esimerkki -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum tempor turpis in tristique</p>
+        </div>
+        <div class="col-6"><!-- todo listan lappu esimerkki -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum tempor turpis in tristique</p>
+        </div>
     </div>
 
 </div>
