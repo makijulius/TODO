@@ -2,8 +2,8 @@
     box-sizing: border-box;
   }
 
-header {
-
+.header {
+  text-align: center;
 }
 
 body {
