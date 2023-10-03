@@ -12,8 +12,8 @@ vanhadiv.appendChild(uusdiv);
 }
 
 function testi(){
-    const h1teksti = "Otsikko";
-    const pteksti = "dsaiufsdaufsofduiadsfsndpfoasofodsifpdasfapodsfaspf";
+    var h1teksti = document.querySelector("#otsikko").value;
+    var pteksti = document.querySelector("teht").value;
 
     const divtesti = document.createElement("div");
 
@@ -42,7 +42,6 @@ function testi(){
 
 
 
-
-    const otsikkodata = document.querySelector("#otsikko").value;
+   // const otsikkodata = document.querySelector("#otsikko").value;
     
-    const tehtdata = document.querySelector("teht").value;
+   // const tehtdata = document.querySelector("teht").value;
