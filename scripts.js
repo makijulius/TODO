@@ -36,12 +36,3 @@ function testi(){
     todotesti.appendChild(divtesti)
 }
 
-
-
-
-
-
-
-   // const otsikkodata = document.querySelector("#otsikko").value;
-    
-   // const tehtdata = document.querySelector("teht").value;
