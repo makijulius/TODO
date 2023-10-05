@@ -2,6 +2,10 @@
     box-sizing: border-box;
   }
 
+.row {
+  word-wrap: break-word;
+}
+
 .header {
   text-align: center;
 }
