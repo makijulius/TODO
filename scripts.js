@@ -35,7 +35,5 @@ function testi(){
 
     divtesti.classList.add("col-6");
 
-    divtesti.classList.add("col-6");
-
     todotesti.appendChild(divtesti);
 }
