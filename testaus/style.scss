@@ -1,4 +1,5 @@
 // css for drag and drop
+// css for drag and drop
 
 
 body {
@@ -19,7 +20,30 @@ button:focus {
   outline: none;
 }
 // header CSS
+.main-sec{
+  padding-top: 60px;
+}
+.title-head {
+  text-align: center;
+  color: #616061;
+  position: relative;
+  margin: 30px 0 2px;
+  padding-top: 12px;
+  font-size: 22px;
 
+  &:before {
+    content: "";
+    width: 96px;
+    height: 2px;
+    background: #e8488e;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -43%);
+    z-index: -1;
+  }
+}
 .drag {
   position: relative;
   min-height: 300px;
@@ -39,7 +63,7 @@ button:focus {
     justify-content: space-around;
     color: #BBB;
 
-    ul {
+    .dropzone{
       width: 40%;
       min-height: 300px;
       padding: 18px;
@@ -47,7 +71,7 @@ button:focus {
       background-color: rgba(0,0,0,0.2);
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 
-      li {
+      .pieni {
         padding: 5% 2%;
         background-color: #fff;
         text-align: center;
@@ -70,10 +94,25 @@ button:focus {
         }
       }
 
-      li:active {
+      .pieni:active {
         background-color: #ed328f;
         color: white;
       }
     }
+  }
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #a0a0a0;
+  color: white;
+  text-align: center;
+  padding: 13px;
+
+  p {
+    margin: 0;
   }
 }
