@@ -1,28 +1,15 @@
 function uuslappu(){
-
-const uusdiv = document.createElement("div");
-
-const teksti = document.createTextNode("dsaiufsdaufsofduiadsfsndpfoasofodsifpdasfapodsfaspf");
-
-uusdiv.appendChild(teksti);
-
-const vanhadiv = document.querySelector("#TODO-ALUE");
-
-vanhadiv.appendChild(uusdiv);
-}
-
-function testi(){
-    var h1teksti = document.querySelector("#otsikko").value;
+    var h2teksti = document.querySelector("#otsikko").value;
     var pteksti = document.querySelector("#teht").value;
 
     const divtesti = document.createElement("div");
 
-    const h1 = document.createElement("h1");
-    const h1lisays = document.createTextNode(h1teksti);
+    const h2 = document.createElement("h2");
+    const h2lisays = document.createTextNode(h2teksti);
 
-    h1.appendChild(h1lisays);
+    h2.appendChild(h2lisays);
 
-    divtesti.appendChild(h1);
+    divtesti.appendChild(h2);
 
     const p = document.createElement("p");
     const plisays = document.createTextNode(pteksti);
@@ -35,5 +22,45 @@ function testi(){
 
     divtesti.classList.add("col-6");
 
+    divtesti.classList.add("lappu");
+
+    divtesti.setAttribute("draggable", "true");
+
     todotesti.appendChild(divtesti);
 }
+
+(function() {
+    var dragged, listener;
+
+    console.clear();
+
+    dragged = null;
+
+    listener = document.addEventListener;
+
+    listener("dragstart", (event) => {
+      console.log("start !");
+      return dragged = event.target;
+    });
+
+    listener("dragend", (event) => {
+      return console.log("end !");
+    });
+
+    listener("dragover", function(event) {
+      return event.preventDefault();
+    });
+
+    listener("drop", (event) => {
+      console.log("drop !");
+      event.preventDefault();
+      if (event.target.className === "col-4 dropzone") {
+        dragged.parentNode.removeChild(dragged);
+        return event.target.appendChild(dragged);
+      }
+    });
+
+  }).call(this);
+
+
+  

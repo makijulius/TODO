@@ -2,10 +2,6 @@
     box-sizing: border-box;
   }
 
-.row {
-  word-wrap: break-word;
-}
-
 .header {
   text-align: center;
 }
@@ -13,6 +9,37 @@
 body {
     margin: 0;
     font-family: Arial;
+}
+
+.drag {
+  position: relative;
+}
+
+.wrapper {
+  word-wrap: break-word;
+  display: flex;
+  flex: 1 1 0;
+}
+
+.dropzone {
+  min-height: 500px;
+
+}
+
+.lappu p, .lappu h2{
+  background-color: aqua;
+}
+
+.lappu {
+  cursor: move;
+}
+
+.lappu:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.lappu:active {
+  background-color: #585858;
 }
 
 [class*="col-"] {
