@@ -1,49 +1,48 @@
 function uuslappu(){
+    //Haetaan otsikon ja tehtävä syöttöalueiden sisällöt
     let h2teksti = document.querySelector("#otsikko").value;
     let pteksti = document.querySelector("#teht").value;
+    //
+    const lappunen = document.createElement("div");
 
-    const divtesti = document.createElement("div");
-
+    //Määritetään ja lisätään h2-alue, otsikkoteksti h2-alueelle, ja h2-alue lapulle
     const h2 = document.createElement("h2");
     const h2lisays = document.createTextNode(h2teksti);
 
     h2.appendChild(h2lisays);
+    lappunen.appendChild(h2);
 
-    divtesti.appendChild(h2);
-
+    //Määritetään ja lisätään p-alue, tehtäväteksti p-alueelle, ja p-alue lapulle
     const p = document.createElement("p");
     const plisays = document.createTextNode(pteksti);
 
     p.appendChild(plisays);
+    lappunen.appendChild(p);
 
-    divtesti.appendChild(p);
-
+    //Määritellään ja lisätään lappuun delete-nappula
     const deleteButton = document.createElement('button');
 
     deleteButton.textContent = "Poista";
-    divtesti.appendChild(deleteButton);
+    lappunen.appendChild(deleteButton);
 
+    //Delete-nappulan toimivuus
     deleteButton.addEventListener('click', function() {
-    divtesti.remove();
+    lappunen.remove();
     })
+    
+    const todoalue = document.querySelector("#TODO-ALUE");
 
-    const todotesti = document.querySelector("#TODO-ALUE");
+    //Annetaan lappuselle class ja drag-toimivuus
+    lappunen.classList.add("col-6");
+    lappunen.classList.add("lappu");
+    lappunen.setAttribute("draggable", "true");
 
-    divtesti.classList.add("col-6");
+    //Lisätään lappunen ToDo-alueelle
+    todoalue.appendChild(lappunen);
 
-    divtesti.classList.add("lappu");
-
-    divtesti.setAttribute("draggable", "true");
-
-
-    todotesti.appendChild(divtesti);
-
+    //Tyhjennetään formin kentät
     document.querySelector("#lomake").reset();
-
 }
-
-
-
 
 (function() {
     let dragged, listener;
@@ -55,23 +54,31 @@ function uuslappu(){
     listener = document.addEventListener;
 
     listener("dragstart", (event) => {
-      console.log("start !");
+
+      //Raahatessa consoleen tulee viesti "start"
+      console.log("start !"); 
       return dragged = event.target;
     });
-
-    listener("dragend", (event) => {
-      return console.log("end !");
-    });
-
+    
     listener("dragover", function(event) {
       return event.preventDefault();
     });
+    
 
     listener("drop", (event) => {
+
+      //Elementin pudottaessa consoleen tulee viesti "stop"
       console.log("drop !");
+      
       event.preventDefault();
+      
+      //If-lause varmistaa, että raahattu elementti on määritellyn pudotusalueen kohdalla
       if (event.target.className === "col-4 dropzone") {
+
+        //Poistetaan raahattu elementti alkuperäisestä sijainnista
         dragged.parentNode.removeChild(dragged);
+
+        //Lisätään elementti haluttuun pudotusalueeseen
         return event.target.appendChild(dragged);
       }
     });
