@@ -1,6 +1,6 @@
 function uuslappu(){
-    var h2teksti = document.querySelector("#otsikko").value;
-    var pteksti = document.querySelector("#teht").value;
+    let h2teksti = document.querySelector("#otsikko").value;
+    let pteksti = document.querySelector("#teht").value;
 
     const divtesti = document.createElement("div");
 
@@ -18,6 +18,15 @@ function uuslappu(){
 
     divtesti.appendChild(p);
 
+    const deleteButton = document.createElement('button');
+
+    deleteButton.textContent = "Poista";
+    divtesti.appendChild(deleteButton);
+
+    deleteButton.addEventListener('click', function() {
+    divtesti.remove();
+    })
+
     const todotesti = document.querySelector("#TODO-ALUE");
 
     divtesti.classList.add("col-6");
@@ -26,11 +35,18 @@ function uuslappu(){
 
     divtesti.setAttribute("draggable", "true");
 
+
     todotesti.appendChild(divtesti);
+
+    document.querySelector("#lomake").reset();
+
 }
 
+
+
+
 (function() {
-    var dragged, listener;
+    let dragged, listener;
 
     console.clear();
 
@@ -61,6 +77,3 @@ function uuslappu(){
     });
 
   }).call(this);
-
-
-  

@@ -26,15 +26,20 @@ body {
 
 }
 
-.lappu p, .lappu h2{
-  background-color: aqua;
-}
-
 .lappu {
   cursor: move;
+  border-radius: 8px;
+  background: #ffffcc;
+  box-shadow: inset 0 0 0 1px #ffcc00;
 }
 
-.lappu:hover {
+
+.lappu button:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.lappu.hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 

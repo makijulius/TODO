@@ -21,13 +21,13 @@
     <label for="teht">Tehtävä:</label>
     <input type="text" id="teht" name="teht" required>
 
-    <button onclick="uuslappu()">Lisää</button>
+    <button id="nappi" onclick="uuslappu()">Lisää</button>
 </form>
 
 <div class="col-12"><!-- to-do lista -->
     <div class="drag">
         <div class="wrapper">
-            <div class="col-4 dropzone" id="TODO-ALUE"><!-- TO DO -->
+            <div class="col-4 dropzone" id="TODO-ALUE" draggable="false"><!-- TO DO -->
                 <h1>TO DO</h1>
                 <div class="col-6 lappu" draggable="true"><!-- todo listan lappu esimerkki -->
                     <h2>Lappu otsikko</h2>
