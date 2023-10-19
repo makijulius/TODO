@@ -2,7 +2,18 @@ function uuslappu(){
     //Haetaan otsikon ja tehtävä syöttöalueiden sisällöt
     let h2teksti = document.querySelector("#otsikko").value;
     let pteksti = document.querySelector("#teht").value;
-    //
+    
+  //luodaan if-lauseet tyhjälle formille, return-toiminto keskeyttää lapun luomisen jos kentät ovat tyhjiä
+  if (h2teksti.trim() === "" && pteksti.trim() === ""){  
+    alert("Molemmat tekstikentät ovat tyhjiä!")
+    return;
+  }
+  else if (h2teksti.trim() === "" || pteksti.trim() === ""){
+    alert("Toinen kentistä on tyhjä!")
+    return;
+  }
+
+    //Määritetään lappu div
     const lappunen = document.createElement("div");
 
     //Määritetään ja lisätään h2-alue, otsikkoteksti h2-alueelle, ja h2-alue lapulle
