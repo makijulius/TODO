@@ -9,8 +9,12 @@ Hyödynsimme Visual Studio Coden LiveShare-lisäosaa, ja käytimme Discordia et�
 
 
 Lähteet:
+
 W3Schools JavaScript, HTML ja CSS-osiot https://www.w3schools.com/
+
 Codepen by antu ram https://codepen.io/anturam/pen/jpgWJL
+
 ChatGPT, kysytty syntaksien käyttötarkoitusta ja toimivuutta https://chat.openai.com
+
 Mozilla Developer Network https://developer.mozilla.org/en-US/
 
